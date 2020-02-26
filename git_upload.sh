@@ -88,9 +88,9 @@ new_release()
 		exit
 	fi
 
-	commit_to_master;
+	#commit_to_master;
 
-	git checkout Release
+	#git checkout Release
 	#echo "#" 
 	git init
 	git add *
