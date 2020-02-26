@@ -8,7 +8,7 @@ first_commit()
 	git commit -m "First commit"
 	# git remote add origin $repo_url
     add_repo;
-	git tag "D_0.0"
+	git tag "D_V0.0"
 	git push --force origin master --tags
 	# git checkout -b Release
 	# git checkout master
