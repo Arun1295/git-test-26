@@ -1,4 +1,4 @@
-repo_url=https://github.com/Arun1295/git-test-26.git
+repo_url=https://github.com/Arun1295/git-test.git
 date=$(date +'%m/%d/%Y %H:%M:%S')
 
 first_commit()
@@ -10,8 +10,8 @@ first_commit()
     add_repo;
 	git tag "D_V0.0"
 	git push --force origin master --tags
-	# git checkout -b Release
-	# git checkout master
+	git checkout -b Release
+	git checkout master
 	echo "Uploaded"
 	read -rsp $'Repository updated.Press to exit...\n'
 }
@@ -88,9 +88,9 @@ new_release()
 		exit
 	fi
 
-	#commit_to_master;
+	# commit_to_master;
 
-	#git checkout Release
+	# git checkout Release
 	#echo "#" 
 	git init
 	git add *
@@ -135,8 +135,7 @@ usage_msg=$'Usage:
 git_upload.sh first_commit (or)
 git_upload.sh daily_commit <dev-version-num> (or)
 git_upload.sh release <rel-version-num> (or)
-git_upload.sh list_tags (or)
-git_upload.sh change_tag <tag-name> 
+git_upload.sh list_tags 
 '
 
 
@@ -182,19 +181,19 @@ then
 
 	read -rsp $'Press to exit...\n'
 
-elif [ "$1" = "change_tag" ]
-then 
-	echo "change_tag"
+# elif [ "$1" = "change_tag" ]
+# then 
+# 	echo "change_tag"
 
-	change_tag;
+# 	change_tag;
 
-	read -rsp $'Press to exit...\n'
+# 	read -rsp $'Press to exit...\n'
 
-elif [ "$1" = "master" ]
-then 
-	echo "master"
-	git checkout master
-	read -rsp $'Press to exit...\n'
+# elif [ "$1" = "master" ]
+# then 
+# 	echo "master"
+# 	git checkout master
+# 	read -rsp $'Press to exit...\n'
 
 else
 	echo "Invalid option"
