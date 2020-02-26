@@ -181,13 +181,13 @@ then
 
 	read -rsp $'Press to exit...\n'
 
-# elif [ "$1" = "change_tag" ]
-# then 
-# 	echo "change_tag"
+elif [ "$1" = "log" ]
+then 
+ 	echo "log"
 
-# 	change_tag;
+ 	git log --oneline
 
-# 	read -rsp $'Press to exit...\n'
+ 	read -rsp $'Press to exit...\n'
 
 # elif [ "$1" = "master" ]
 # then 
