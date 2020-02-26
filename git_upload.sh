@@ -107,7 +107,7 @@ new_release()
 	
 	git push origin Release --tags
 	echo "Release updated Succesfully"
-	git checkout master
+	#git checkout master
 	read -rsp $'Press to exit...\n'
 }
 
